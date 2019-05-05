@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/zhanfenghai/copy-file-to#readme",
   "dependencies": {
-    "fs": "0.0.1-security"
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
   }
 }

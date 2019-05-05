@@ -1,4 +1,5 @@
 var fs = require('fs')
+var path = require('path')
 function copy(src, dist, cb) {
   fs.access(dist, function(err) {
     if (err) {
@@ -20,8 +21,8 @@ function copy(src, dist, cb) {
           cb(err)
         } else {
           paths.forEach(function(path) {
-            var _src = src + '/' + path
-            var _dist = dist + '/' + path
+            var _src = path.join(src, path)
+            var _dist = path.join(dist, path)
             fs.stat(_src, function(err, stat) {
               if (err) {
                 cb(err)
